@@ -16,7 +16,7 @@ body {
   letter-spacing: 0.03em;
   font-weight: 400;
   color: var(--dark-grey-color);
-  background-color: var(--background-section);
+
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -98,6 +98,7 @@ body {
   text-align: center;
   background: var(--background-h-f);
   margin-top: -30px;
+  background: var(--background-section);
 }
 
 .h {
