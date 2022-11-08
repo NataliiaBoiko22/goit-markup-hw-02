@@ -1,16 +1,21 @@
 :root {
   --background-h-f: #2f303a;
-  --background-sect: #f5f4fa;
+  --background-section: #f5f5f5;
+  --background-team: #f5f4fa;
   --dark-grey-color: #212121;
   --light-grey-color: #757575;
   --white-color: #ffffff;
   --blue-color: #2196f3;
+  --font-main: ;
 }
 
 body {
-  font-family: "Roboto";
-  font-style: normal;
-
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  color: var(--dark-grey-color);
+  background-color: var(--background-section);
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -18,8 +23,8 @@ body {
 /* TODO header */
 
 .page-header {
+  background: var(--white-color);
   height: 80px;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -37,14 +42,13 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: 31px;
-  letter-spacing: 0.03em;
+  line-height: 1.19;
   color: var(--blue-color);
   text-decoration: none;
   margin-right: 90px;
 }
 .logo .logo_part {
-  color: var(--dark-grey-color);
+  color: #000000;
 }
 
 .site-nav {
@@ -54,15 +58,13 @@ body {
   justify-content: space-between;
   margin: 8px 0;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   list-style: none;
 }
 .nav-li {
-  color: var(--dark-grey-color);
-
   text-decoration: none;
+  color: var(--dark-grey-color);
 }
 
 .active,
@@ -77,14 +79,13 @@ body {
   flex-direction: row;
   margin: 32px 0;
   list-style: none;
+  color: var(--dark-grey-color);
 }
 .auth-nav-li {
   text-decoration: none;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
-
   color: var(--light-grey-color);
   margin-left: 50px;
 }
@@ -94,18 +95,17 @@ body {
 .main-info {
   height: 600px;
   text-align: center;
-  background: var(--dark-grey-color);
+  background: var(--background-h-f);
   margin-top: -30px;
 }
 
-.h1 {
+.h {
   font-weight: 900;
   font-size: 44px;
-  line-height: 60px;
+  line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
   color: var(--white-color);
   padding: 200px 452px 30px;
 }
@@ -118,14 +118,16 @@ body {
   border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.88;
   letter-spacing: 0.06em;
-
   color: var(--white-color);
+  border: var(--background-h-f);
 }
 .btn-primary:hover {
-  transition: all 400ms ease;
-  transform: scale(1.1);
+  background: #188ce8;
+  border: var(--background-h-f);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -136,6 +138,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   margin: 94px 215px 94px 175px;
+  background: var(--background-section);
 }
 
 .main-features > li {
@@ -143,19 +146,14 @@ body {
   list-style: none;
 }
 
-.main-features > li > h2 {
+.features-h {
   font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
+  line-height: 1.14;
   text-transform: uppercase;
   color: var(--dark-grey-color);
 }
-.main-features > li > p {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
+.features-p {
+  line-height: 1.71;
   color: var(--light-grey-color);
 }
 
@@ -163,13 +161,13 @@ body {
 .images-row {
   margin: 0 215px 90px 175px;
   text-align: center;
+  background: var(--background-section);
 }
-.images-row > h3 {
+.images-row > h2 {
   font-weight: 700;
   font-size: 36px;
-  line-height: 42px;
+  line-height: 1.17;
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--dark-grey-color);
   margin-bottom: 50px;
 }
@@ -185,11 +183,11 @@ body {
 .team {
   padding: 94px 215px 94px 175px;
   text-align: center;
+  background: var(--background-team);
 }
 .card {
   width: 270px;
   height: 368px;
-
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -204,25 +202,21 @@ body {
 .team > h2 {
   font-weight: 700;
   font-size: 36px;
-  line-height: 42px;
+  line-height: 1.17;
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--dark-grey-color);
 }
 .name-member {
   font-weight: 500;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.19;
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--dark-grey-color);
 }
 .prof {
-  font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.19;
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--light-grey-color);
 }
 /* TODO footer */
@@ -243,33 +237,39 @@ body {
   margin-left: -40px;
 }
 .address-li {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
+  line-height: 1.71;
   color: var(--white-color);
   margin-top: 10px;
 }
 .footer-nav-li {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
+  line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+}
+
+.footer-nav-li:hover,
+.footer-nav-li:focus {
+  color: var(--blue-color);
 }
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PORTFOLIO PAGE  */
 .main_portfolio {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 94px 215px;
+  margin: 44px 215px 94px;
+  background: var(--background-section);
+}
+.main_portfolio_h {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--dark-grey-color);
 }
 .button-ul {
   margin-bottom: 34px;
   width: 575px;
   display: flex;
-
   flex-direction: row;
   justify-content: space-between;
   list-style: none;
@@ -278,9 +278,8 @@ body {
   list-style: none;
   font-weight: 500;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 1.62;
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--dark-grey-color);
   text-decoration: none;
   padding: 12px 22px;
@@ -296,9 +295,8 @@ body {
   border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 1.62;
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--white-color);
 }
 
@@ -306,18 +304,17 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
+  list-style: none;
 }
 
 .portfolio_card > h4 {
   font-weight: 700;
   font-size: 18px;
-  line-height: 36px;
+  line-height: 2;
   color: var(--dark-grey-color);
 }
 .portfolio_card > p {
-  font-weight: 400;
   font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.03em;
+  line-height: 1.88;
   color: var(--light-grey-color);
 }
